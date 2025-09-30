@@ -85,3 +85,46 @@ Represents a customer’s bill.
 ## Simulation Logic
 
 1. **Input File**: The first line contains:
+- `C` – Number of customers
+- `O` – Number of operators
+- `N` – Number of operations
+
+2. **Operations**: Each operation in the input file has a type:
+- `1` – Create a new Customer
+- `2` – Create a new Operator
+- `3` – Customer talks to another customer
+- `4` – Customer sends messages
+- `5` – Customer connects to the Internet
+- `6` – Customer pays bills
+- `7` – Customer changes operator
+- `8` – Customer changes bill limit
+
+3. **Calculations**:
+- Discounts are applied based on age or operator rules.
+- Actions are only performed if the bill limit allows.
+- Operator statistics are updated in real-time.
+
+4. **Output File**: After processing all operations, the output contains:
+- Operator summary: total talking time, messages sent, internet usage
+- Customer summary: money spent, current debt
+- Most active customers by talking, messaging, and internet usage
+
+---
+
+## Sample Input (`input.txt`)
+
+3
+3
+12
+2 0.5 0.48 0.15 18
+2 0.43 0.47 0.18 20
+1 aaa 20 1 100
+2 0.55 0.20 0.35 10
+1 bbb 16 0 200
+1 ccc 48 1 150
+4 2 0 7
+5 0 14.4
+4 0 1 3
+3 1 2 13
+6 0 2.5
+7 1 2
